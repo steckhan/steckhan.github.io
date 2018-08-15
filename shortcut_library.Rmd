@@ -28,3 +28,312 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Generate demo data
+```{r demodata, echo=FALSE}
+data <- data.frame(id=1:100,group=sample(c("verum","control"),100,replace = T),time=rep(1,100),output=runif(100))
+data2 <- data.frame(id=1:100,group=sample(c("verum","control"),100,replace = T),time=rep(2,100),output=runif(100))
+
+data <- rbind(data,data2)
+
+```
+
+## repeat to fill column with ID or group ####
+```{r pressure, echo=FALSE}
+id <- na.omit(data$group)
+data$group <- rep(id, each=2)
+```
+
+
+
+## fill group column (if Visiten have NAs, eg just first group in visite 1 is mentioned) #### 
+df <- data.frame(na.omit(data$Gruppe))
+data$Gruppe <- df[rep(seq_len(nrow(df)), each=2),] # 2 Visiten
+
+##### remove id if any timepoint is NA (for ezANOVA) ###########
+setwho2
+setwho2 <- na.omit(setwho2)
+setwho2 <- subset(setwho2, Visite != "2") ## keine Visite 2
+setwho2 <- subset(setwho2, Visite != "3") ## keine Visite 3
+##### keep id if all roundwards are available ######
+vis1 <- c(0,1) # AND keep only complete Visiten 1, 2
+x1 <- do.call(rbind, lapply(split(data, list(data$VPNR)), 
+                            function(.var){ 
+                              if (all(.var$Visite == vis1)) return(.var) # or %in%
+                              else return(NULL) 
+                            })) 
+
+
+
+## comma into dot ####
+data[,"BMI"] <- gsub(",", ".", data[ , "BMI"])  # einzeln pro spalte
+data <- data.frame(lapply(data, function(x) gsub(",", ".", x, fixed = TRUE))) #für alle Spalten im dataframe
+
+## from wide to long format (for ggplot2) ####
+# http://www.cookbook-r.com/Manipulating_data/Converting_data_between_wide_and_long_format/
+
+library(reshape2)
+
+fastdia2 <- na.omit(fastdia2)
+fastdia2$sub <- rownames(fastdia)
+data_long <- melt(fastdia2,
+                  # ID variables - all the variables to keep but not split apart on
+                  id.vars=c("id"),
+                  # The source columns
+                  measure.vars=c("Homa0", "Homa1"),
+                  # Name of the destination column that will identify the original
+                  # column that the measurement came from
+                  variable.name="time",
+                  value.name="measurement"
+)
+
+
+datal <- reshape(data[1:40], idvar=c("PID"), varying=2:40, direction="long", sep="_")
+boxplot(KG ~ time , data=datal)
+
+library(reshape2)
+melt(data, id.vars=c("PID"))
+
+
+
+library(tidyr)
+data1 <- data[1:4]
+gather(data1, time, KG, 2:4, factor_key=T)
+data1l <- gather(data1, time, KG, 2:4, factor_key=T)
+boxplot(KG ~ time, data = data1l)
+
+data[,1:10] %>%
+  gather(key, value, -PID) %>%
+  extract(col = key,into =  c("variable", "time"), regex = "([A-z]+)_([A-z0-9]+)") %>%
+  spread(variable, value)
+
+
+
+
+
+## merge data ''
+data3 <- merge(data, data_long, by=c("VPNR","Visite"))
+## merge by rownames 
+merge(entspanntab,entsptab,by="row.names",all.y=TRUE)
+
+### multiple imputation with amelia --------------------------------------
+library(Amelia)
+ncpus = 4 #for multicore support
+m = ncpus * 10      # 40 sets, see Bagging
+summary(x1)
+a.out <- amelia(x=x1,m=m, idvars = "VPNR", ts="Visite", cs="Gruppe",
+                ords = c("SF01_01","SF02","SF03_03","SF05_01"),  parallel = 'multicore', ncpus = ncpus)
+a.out$imputations[[5]]
+
+
+
+
+# restore order 
+x.new$Pat_Nr <- as.numeric(as.character(x.new$Pat_Nr))
+x.new <- x.new[order(x.new[,1]),]
+
+# as.numeric(as.character(x)) shortcut
+anac <- function (x) {x <- as.numeric(as.character(x))}
+
+# split name and edit
+rownames(entsptab) <- gsub("^.*?ENTSP_","", rownames(entsptab))
+# or split like this
+save=NULL
+for (i in 1:length(rownames(entsptab))) {
+        save <- append(save, print(unlist(strsplit(rownames(entsptab)[i], split='_', fixed=TRUE))[4]))
+}
+save
+rownames(entsptab) <- save 
+#####
+### Build spliting variable from 
+library(Hmisc)
+cut2(rm1.complete$expr, g=2)
+
+
+# Check if Variable has NA across Visits ----------------------------------
+
+table(is.na(data$Gew),data$Visite)
+
+as.data.frame(split(ifelse(is.na(data$Gew)==TRUE,NA,1), data$VPNR),optional = T)
+check <- t(as.data.frame(split(ifelse(is.na(data$Gew)==TRUE,NA,1), data$VPNR),optional = T))
+md.pattern(check)
+# scan thru columns to find NA patterns -----------------------------------
+ba <- colnames(data)
+for (i in ba) {
+  chek <- t(as.data.frame(split(ifelse(is.na(data[,i])==TRUE,NA,1), data$VPNR),optional = T))
+  print(i)
+  #print(chek)
+  print(md.pattern(chek))
+}
+
+
+# Loop thru table an build Word-format tables
+# Ala MIFT.R
+
+
+
+
+
+# good 2 know -------------------------------------------------------------
+
+# aggregate multiple functions
+aggregate(iris$Sepal.Length, by=list(iris$Species), function(x){c(mean=mean(x),sdev= sd(x)) })
+
+
+# Wilcoxn effect size (output r)-----------------------------------------------------
+
+wilcox_effectsize <- function (x,n){
+  require(coin)
+  z = statistic(wilcox_test(x, distribution='exact'))
+  return(abs(z/sqrt(n)))
+}
+ 
+
+# add column inbetween ----------------------------------------------------
+as.data.frame(append(df1, df2, after = 3))
+
+
+
+# Reorder factor levels ---------------------------------------------------
+data$Gruppe <- factor(data$Gruppe, levels = levels(data$Gruppe)[c(2,1)])
+
+
+# list all means etc ----------------------------------------------------
+data4_describe = matrix(unlist(apply(data4,2,describe)),ncol=13 , byrow = T)
+write.clipboard(cbind(names(data4),data4_describe))
+
+
+# extract every nth element of a vector -----------------------------------
+a <- 1:120
+b <- a[seq(1, length(a), 6)]
+
+
+# bind function to variables ----------------------------------------------
+makeActiveBinding('x', function () dim(abf), globalenv())
+
+
+# remove whitespace in characters
+names(data) <- gsub(" ", "", names(data), fixed = TRUE)
+
+# Extract se cond subelement of every element in a list while ignoring NA's in sapply
+sapply(mylist,function(x) x[2])
+
+
+
+# Multiplot of different kinds --------------------------------------------
+
+library(RGraphics) # support of the "R graphics" book, on CRAN
+library(gridExtra) 
+g1 <- tableGrob(head(iris))
+string <- "
+This famous (Fisher's or Anderson's) iris data set gives the
+measurements in centimeters of the variables sepal length and width
+and petal length and width, respectively, for 50 flowers from each of
+3 species of iris. The species are Iris setosa, versicolor, and
+virginica.
+"
+g2 <- splitTextGrob(string)
+#"Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"
+g3 <- qplot(Sepal.Length,  Petal.Length, data=iris, colour=Species)
+grid.arrange(g1,g2,g3, ncol=1, top="The iris data")
+
+
+
+# win to unix -------------------------------------------------------------
+
+# in terimnal type tr -d '\15\32' < winfile.txt > unixfile.txt
+
+
+
+
+
+# loop thru data for repeated 2-way anovas --------------------------------
+
+myfunc <- function(the_data, the_dv) {
+  eval(
+    substitute(
+      ezANOVA(data = the_data, 
+              wid = VPNR, 
+              dv = the_dv, 
+              between = Gruppe,
+              within=Visite,
+              type=3,
+              detailed = T), 
+      list(the_dv = the_dv)))
+}
+
+
+for (i in 74:98) {
+  print(colnames(x1)[i])
+  print(myfunc(x1,colnames(x1)[i]))
+}
+
+
+# select columns via GUI
+vars <- select.list(names(data),multiple=TRUE,
+                    title='select your variable names',
+                    graphics=TRUE)
+
+# update R interactivley
+install.packages("devtools")
+devtools::install_github("AndreaCirilloAC/updateR")
+updateR(admin_password = "PASSWORD") # Where "PASSWORD" 
+
+
+# 95% confidence interval into standard deviation
+int2sd <- function(a,b,n) {
+  ci <- c(a,b)
+  x_bar <- mean(ci)
+  if (n <= 30) {
+    warning("attention: probably non-gaussian")
+  }
+  return(((sqrt(n))/1.96)*(x_bar-ci[1]))
+} 
+
+
+# SD change
+sd_change <- function(sd1,sd2,cor=0.7) {
+  return(sqrt(sd1^2+sd2^2 - (2*cor*sd1*sd2)))
+}
+
+# SD change from two 95%-intervals
+sd_change(sd1=int2sd(-1,2,40),sd2=int2sd(-1.5,1.8,45))
+
+
+# cut into factor using quantiles -----------------------------------------
+alt <- rnorm(n = 100, 1)
+cut(alt, breaks = c(quantile(alt, probs =seq(0,1,by=.25))),labels=c("0-25%","25-50%","50-75%","75-100%"), include.lowest = T)
+
+# unlist list
+idsn = unlist(lapply(idsn, `[[`, 1))
+
+# copy from console to build vector commaseperated
+cat(paste(shQuote(colnames(final), type="cmd"), collapse=", "))
+
+# get datetime format correct (?strptime)
+as.POSIXct("Mo 16 Jul 2018 22:58:49", format="%a %d %b %Y %H:%M:%S")
+strptime("Mo 16 Jul 2018 22:58:49", format="%a %d %b %Y %H:%M:%S")
+
+# compare datetime
+format(as.POSIXct(seesel$V1,format="%H:%M:%S")) > format(as.POSIXct("8:00:00", format="%H:%M:%S"))
+
+# write psych output to clipboard or email
+data4_describe = matrix(unlist(apply(data3[,vars <- select.list(names(data3)[1:10],multiple=TRUE,
+                                                                title='select your variable names',
+                                                                graphics=TRUE)],2,describe)),ncol=13 , byrow = T)
+write.clipboard(cbind(names(data3)[names(data3) %in% vars],data4_describe))
+
+# use with (feste breite font: )
+knitr::kable(see)
+
+# as html
+output <- 
+  matrix(paste("Content", LETTERS[1:16]), 
+         ncol=4, byrow = TRUE)
+
+# https://cran.r-project.org/web/packages/htmlTable/vignettes/tables.html
+library(htmlTable)
+htmlTable(output)
+
+
+
