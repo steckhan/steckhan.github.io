@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Intro
 
-Codeing can be a time consuming task. Therfore I created a library where I collect code snippets to have shortcuts right to my hands.
+Codeing can be a time consuming task. Therfore I created a library where I collect code snippets to have shortcuts right to my fingertips.
 
 
 
