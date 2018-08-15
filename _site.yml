@@ -15,7 +15,7 @@ navbar:
       href: shortcut_library.html
   right:
     - icon: fa-envelope fa-lg
-      href: contact.html
+      href: mailto:nico.steckhan@gmail.com
     - icon: fa-github fa-lg
       href: http://github.com/steckhan
     - icon: fa-twitter fa-lg
