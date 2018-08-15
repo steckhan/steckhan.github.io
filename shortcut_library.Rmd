@@ -39,13 +39,12 @@ data <- rbind(data,data2)
 ```
 
 ## repeat to fill column with ID or group ####
-```{r pressure, echo=FALSE}
+```{r snippet1, echo=FALSE}
 id <- na.omit(data$group)
-data$group <- rep(id, each=2)
+rep(id, each=2)
 ```
 
-
-
+```{r snippets, echo=FALSE, eval=F, warning=F}
 ## fill group column (if Visiten have NAs, eg just first group in visite 1 is mentioned) #### 
 df <- data.frame(na.omit(data$Gruppe))
 data$Gruppe <- df[rep(seq_len(nrow(df)), each=2),] # 2 Visiten
@@ -335,5 +334,4 @@ output <-
 library(htmlTable)
 htmlTable(output)
 
-
-
+```
