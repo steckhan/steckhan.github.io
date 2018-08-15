@@ -8,7 +8,7 @@ output: html_document
 <link rel="stylesheet" href="styles.css" type="text/css">
 
 
-<img src="images/me.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
+<img src="images/me3.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
 
 I like to analyze data to answer research questions and really like systems thinking. Currently I investigate questions related to breast cancer through my work as a Research Biostatistician and System administrator at [Integrative medicine/ Clincal Naturopathy - Charite Medical University](http://naturheilkunde.immanuel.de/home/) in the department of Epidemiology & Health economics and Social medicine. 
 
