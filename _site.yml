@@ -19,7 +19,7 @@ navbar:
     - icon: fa-twitter fa-lg
       href: https://twitter.com/_audiophil_
     - icon: fa-linkedin fa-lg
-      href: https://www.linkedin.com/in/e000/
+      href: https://de.linkedin.com/in/nico-steckhan-b35a2736
     - text: "ResearchGate"
       href: https://www.researchgate.net/profile/Nico-Steckhan
     - text: "Scholar"
@@ -28,5 +28,6 @@ output:
   html_document:
     theme: paper
     css: 'styles.css'
+
 
 
