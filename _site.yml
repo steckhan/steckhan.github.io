@@ -1,4 +1,4 @@
-﻿name: "Nico Steckhan"
+name: "Nico Steckhan"
 output_dir: "."
 navbar:
   title: "Nico Steckhan"
@@ -20,6 +20,8 @@ navbar:
       href: https://twitter.com/_audiophil_
     - icon: fa-linkedin fa-lg
       href: https://de.linkedin.com/in/nico-steckhan-b35a2736
+    - icon: fa-instagram fa-lg
+      href: https://www.instagram.com/audiophil_arts/
     - text: "ResearchGate"
       href: https://www.researchgate.net/profile/Nico-Steckhan
     - text: "Scholar"
@@ -28,6 +30,3 @@ output:
   html_document:
     theme: paper
     css: 'styles.css'
-
-
-

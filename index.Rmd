@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Home"
 author: "Nico Steckhan"
 output: html_document
@@ -15,6 +15,6 @@ Before joining BAuA, I held postdoctoral positions at TU Dresden, [Charite Unive
 
 I hold a Dr. rer. medic. from [Charite Universitatsmedizin Berlin](https://www.charite.de/en/), an M.Sc. in Bioinformatics from the [University of Potsdam](https://www.uni-potsdam.de/en/), and a Diplom in Biology from the [Technical University of Dresden](https://tu-dresden.de/). I work mainly with R and Python and enjoy building research infrastructure, proof-of-concept systems, and reproducible analysis workflows.
 
+Music is a second long-term thread in my work. I am interested in guitar, music production, sonification, and the overlap between sound, data, and digital art. More informal music-related projects and visual work can be found on [Instagram](https://www.instagram.com/audiophil_arts/).
+
 My full CV is available [here](files/CV.pdf). You can also find my work on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?user=nwX1I8EAAAAJ&hl=en).
-
-
