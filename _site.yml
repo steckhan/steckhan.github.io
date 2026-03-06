@@ -11,8 +11,6 @@ navbar:
       href: software.html
     - text: "Teaching"
       href: teaching.html
-    - text: "My R Shortcut Library"
-      href: shortcut_library.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:nico.steckhan@gmail.com
@@ -30,4 +28,5 @@ output:
   html_document:
     theme: paper
     css: 'styles.css'
+
 
