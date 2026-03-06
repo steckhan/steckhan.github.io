@@ -29,9 +29,10 @@ My research sits between translational medicine, data science, and connected hea
 - Hecker, P., Steckhan, N. et al. (2022). [Voice Analysis for Neurological Disorder Recognition: A Systematic Review and Perspective on Emerging Trends](https://doi.org/10.3389/fdgth.2022.842301).
 - Kessler, C. S. et al. (2018). [A nonrandomized controlled clinical pilot trial on 8 wk of intermittent fasting (24 h/wk)](https://doi.org/10.1016/j.nut.2017.08.004).
 
-A fuller list of publications is available in my [CV](files/CV.pdf). You can also browse publications on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?view_op=search_authors&mauthors=Nico+Steckhan&hl=en).
+A fuller list of publications is available in my [CV](files/CV.pdf). You can also browse publications on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?user=nwX1I8EAAAAJ&hl=en).
 
 ## Collaboration
 
 I enjoy collaborations that combine clinical questions, sensing technologies, and rigorous quantitative methods. If you are working on digital phenotyping, wearable sensing, or machine learning for real-world health data, feel free to get in touch.
+
 

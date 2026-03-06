@@ -15,5 +15,6 @@ Before joining BAuA, I held postdoctoral positions at TU Dresden, [Charite Unive
 
 I hold a Dr. rer. medic. from [Charite Universitatsmedizin Berlin](https://www.charite.de/en/), an M.Sc. in Bioinformatics from the [University of Potsdam](https://www.uni-potsdam.de/en/), and a Diplom in Biology from the [Technical University of Dresden](https://tu-dresden.de/). I work mainly with R and Python and enjoy building research infrastructure, proof-of-concept systems, and reproducible analysis workflows.
 
-My full CV is available [here](files/CV.pdf). You can also find my work on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?view_op=search_authors&mauthors=Nico+Steckhan&hl=en).
+My full CV is available [here](files/CV.pdf). You can also find my work on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?user=nwX1I8EAAAAJ&hl=en).
+
 
