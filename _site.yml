@@ -11,6 +11,8 @@ navbar:
       href: software.html
     - text: "Teaching"
       href: teaching.html
+    - text: "Music"
+      href: music.html
   right:
     - icon: fa-envelope fa-lg
       href: mailto:nico.steckhan@gmail.com

@@ -1,0 +1,21 @@
+---
+title: "Music"
+author: "Nico Steckhan"
+output: html_document
+---
+
+Music and sound design are a parallel strand of my work and creative practice. Under Audiophil Arts, I work with guitar, vocals, electronics, and electroacoustic production.
+
+## Audiophil Arts
+
+At [biotube.de](https://www.biotube.de/) I collect music, videos, and project material around Audiophil Arts. The work sits between songwriting, experimental electronics, and modern sound design.
+
+## Sound and sonification
+
+My interest in music also connects back to research and teaching. I am particularly interested in sonification, in listening as a way of exploring data, and in the overlap between artistic practice and digital health technologies.
+
+## Links
+
+- [Audiophil Arts / biotube.de](https://www.biotube.de/)
+- [Instagram](https://www.instagram.com/audiophil_arts/)
+- [Twitter / X](https://twitter.com/_audiophil_)
