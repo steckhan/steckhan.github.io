@@ -1,35 +1,37 @@
----
+﻿---
 title: "Research"
 author: "Nico Steckhan"
-date: "22 6 2018"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+My research sits between translational medicine, data science, and connected health. I work on methods that make complex, real-world health data usable for explanation, prediction, and practical decision support.
 
-## Ongoing projects
+## Current directions
 
+- Multimodal sensor data and digital phenotyping
+- Wearables and continuous glucose monitoring in everyday settings
+- Machine learning and sensor fusion for health-related behavior and physiology
+- AI-supported systems for occupational and health research
 
+## Previous and ongoing topics
 
+- Fasting, metabolism, and compliance assessment in remote studies
+- Chronotype, glucose dynamics, and behavioral health signals
+- Bioinformatics and high-dimensional phenotype prediction
+- Placebo effects, stress physiology, and psychobiological responses
+- Digital health infrastructure and reproducible research workflows
 
-## R Markdown
+## Selected publications
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Steckhan, N. (2025). [Sensor-based evaluation of intermittent fasting regimes: a machine learning and statistical approach](https://doi.org/10.1038/s41366-025-01889-0).
+- Steckhan, N. (2025). [Brave New Komplementaer- und Alternativmedizin (CAM)?](https://doi.org/10.1055/a-2500-3348).
+- Steckhan, N. et al. (2023). [Fasting state prediction using continuous glucose monitoring, activity and nutritional data: a tool for compliance evaluation in remote fasting trials](https://doi.org/10.1055/s-0043-1767911).
+- Hecker, P., Steckhan, N. et al. (2022). [Voice Analysis for Neurological Disorder Recognition: A Systematic Review and Perspective on Emerging Trends](https://doi.org/10.3389/fdgth.2022.842301).
+- Kessler, C. S. et al. (2018). [A nonrandomized controlled clinical pilot trial on 8 wk of intermittent fasting (24 h/wk)](https://doi.org/10.1016/j.nut.2017.08.004).
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+A fuller list of publications is available in my [CV](files/CV.pdf). You can also browse publications on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?view_op=search_authors&mauthors=Nico+Steckhan&hl=en).
 
-```{r cars}
-summary(cars)
-```
+## Collaboration
 
-## Including Plots
+I enjoy collaborations that combine clinical questions, sensing technologies, and rigorous quantitative methods. If you are working on digital phenotyping, wearable sensing, or machine learning for real-world health data, feel free to get in touch.
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

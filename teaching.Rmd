@@ -1,30 +1,35 @@
----
+﻿---
 title: "Teaching"
 author: "Nico Steckhan"
-date: "22 6 2018"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+I teach at the intersection of epidemiology, data science, and digital health. My classes combine methodological rigor with practical work on physiological, behavioral, and sensor-based data.
 
-## R Markdown
+## Course modules
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Digital Phenotyping with Sensor Data
+How sensor streams can be translated into research variables, behavioral markers, and study endpoints.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+### Wearables in Practice for Health Research
+Practical use of wearable and mobile data in real-world studies, including quality control, integration, and interpretation.
 
-```{r cars}
-summary(cars)
-```
+### Machine Learning for Multimodal Health Data
+Feature engineering, model selection, validation, and interpretation for longitudinal and multimodal datasets.
 
-## Including Plots
+### Sonification and Digital Health
+Using sound as a tool for data exploration, communication, and interaction in health-related contexts.
 
-You can also embed plots, for example:
+## Thesis and project topics
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+- Adherence and state detection from continuous glucose monitoring, activity, and nutrition data
+- Feature engineering for longitudinal wearable data
+- Sensor fusion for connected health and IoT environments
+- Reproducible machine learning evaluation in health research
+- Data sonification for analysis, communication, and interaction
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+## Teaching style
+
+I prefer project-based formats that move from a concrete research question to data, analysis, and interpretation. The goal is not only to fit models, but to understand how sensing systems, study design, and domain knowledge shape the result.
+
+Recent teaching has included master's-level formats in epidemiology and medical informatics at Charite Universitatsmedizin Berlin.

@@ -1,30 +1,31 @@
----
+﻿---
 title: "Programming"
 author: "Nico Steckhan"
-date: "22 6 2018"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+I program mainly in R and Python for research computing, data science, and digital health applications. Most of my work centers on turning complex real-world data into analysis pipelines, models, and usable prototypes.
 
-## R Markdown
+## What I build
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- Statistical and machine learning workflows for clinical, behavioral, and physiological data
+- Pipelines for multimodal sensor data, including wearables, continuous glucose monitoring, and IoT streams
+- Feature engineering, data augmentation, and sensor fusion workflows
+- Proof-of-concept systems for digital health and connected sensing environments
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Technical focus
 
-```{r cars}
-summary(cars)
-```
+- R for statistical modeling, analysis, visualization, and reporting
+- Python for machine learning, data processing, and rapid prototyping
+- TensorFlow and Keras for applied modeling
+- Linux, virtual machines, and research infrastructure for reproducible work
+- High-performance computing when projects need scale
 
-## Including Plots
+## Current interests
 
-You can also embed plots, for example:
+- Digital phenotyping
+- Wearable sensing in real-world settings
+- Interpretable machine learning for health applications
+- Sensor-software integration across IoT and IoHT systems
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Code and experiments are available on [GitHub](https://github.com/steckhan).

@@ -1,7 +1,6 @@
----
+﻿---
 title: "Home"
 author: "Nico Steckhan"
-date: "15 8 2018"
 output: html_document
 ---
 
@@ -10,10 +9,11 @@ output: html_document
 
 <img src="images/me3.jpg" style="width:25%; border:10px solid; margin-right: 20px" align="left">
 
-I like to analyze data to answer research questions and really like systems thinking. Currently I investigate questions related to breast cancer through my work as a Research Biostatistician and System administrator at [Integrative medicine/ Clincal Naturopathy - Charite Medical University](http://naturheilkunde.immanuel.de/home/) in the department of Epidemiology & Health economics and Social medicine. 
+I am a postdoctoral researcher in the AI junior research group at the [Federal Institute for Occupational Safety and Health (BAuA)](https://www.baua.de/EN/Home/Home_node.html) and a guest scientist in Connected Healthcare at the [Hasso Plattner Institute](https://hpi.de/en/research/research-groups-and-labs/connected-healthcare/). My work sits at the intersection of data science, machine learning, and digital health, with a focus on multimodal sensor data, wearable and IoT systems, and real-world health applications.
 
-I graduated from the [Technical University of Dresden](http://www.sph.umn.edu/academics/divisions/biostatistics/) with a MS in biology in 2010. In 2012 I began working toward my PhD in clincal studies at [Psychosomatic - Charite Medical University](https://psychosomatik.charite.de), where I was investigating placebo effects and its psychoneuroendocrine responses. I expect to graduate in bioinformatics by the end of 2019.
+Before joining BAuA, I held postdoctoral positions at TU Dresden, [Charite Universitatsmedizin Berlin](https://www.charite.de/en/), the [Max Delbruck Center](https://www.mdc-berlin.de/), and the Hasso Plattner Institute. Across these roles, I have worked on clinical and translational research, digital diabetology, physiological sensing, and evidence-based digital health systems.
 
-I am a R enthusiast and member of [Berlin R User Group](https://www.meetup.com/de-DE/Berlin-R-Users-Group/). 
+I hold a Dr. rer. medic. from [Charite Universitatsmedizin Berlin](https://www.charite.de/en/), an M.Sc. in Bioinformatics from the [University of Potsdam](https://www.uni-potsdam.de/en/), and a Diplom in Biology from the [Technical University of Dresden](https://tu-dresden.de/). I work mainly with R and Python and enjoy building research infrastructure, proof-of-concept systems, and reproducible analysis workflows.
 
-My full CV is available [here](files/CV.pdf).
+My full CV is available [here](files/CV.pdf). You can also find my work on [ResearchGate](https://www.researchgate.net/profile/Nico-Steckhan) and [Google Scholar](https://scholar.google.com/citations?view_op=search_authors&mauthors=Nico+Steckhan&hl=en).
+
